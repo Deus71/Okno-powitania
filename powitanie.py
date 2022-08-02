@@ -1,5 +1,5 @@
 from tkinter import *
-# from tkinter import messagebox
+from tkinter import messagebox
 import sys
 
 class Application(Frame):
@@ -30,9 +30,15 @@ class Application(Frame):
         self.imie_txt.insert(0.0, message)
         
     def koniec(self):      # funkcja zakończenia programu
-        messagebox.askquestion("Confirm","Are you sure?")
-        if 'yes':
-            sys.exit()
+        messagebox.askquestion("Potwierdzam","Jesteś pewien?")
+        if answer == 'YES':
+            root.destroy()
+                   
+#     def koniec(self):
+#         answer = askyesno(title='confirmation',
+#                         message='Are you sure that you want to quit?')
+#         if answer:
+#             root.destroy()           
         
         
         
